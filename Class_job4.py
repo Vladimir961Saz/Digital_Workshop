@@ -1,3 +1,4 @@
+# №1
 class Person:
     def __init__(self, name: str, age: int):
         self.name = name
@@ -26,3 +27,20 @@ try:
     p.age = -5
 except ValueError as e:
     print(e)
+
+
+# №2
+class Counter:
+    def __getattribute__(self, name):
+        print(f"Доступ к атрибуту {name}")
+        try:
+            return super().__getattribute__(name)
+        except AttributeError:
+            return None
+
+
+# Пример использования:
+c = Counter()
+c.value = 5         # Атрибут value будет добавлен
+print(c.value)      # Выведет: Доступ к атрибуту value → 5
+print(c.name)       # Выведет: Доступ к атрибуту name → None
