@@ -1,4 +1,3 @@
-
 # №1
 class BankAccount:
     def __init__(self, account_number, balance=0.0):
@@ -104,10 +103,6 @@ print(user2.get_username())
 
 user2.change_password("newpass")  # Ошибка
 user2.change_password("strongpassword")  # Успех
-
-
-
-
 
 
 # №3

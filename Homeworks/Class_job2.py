@@ -1,3 +1,4 @@
+# №1
 class Sauce:
     base = "Olive oil"
     def __init__(self, flavor=None):
